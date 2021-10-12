@@ -1,7 +1,11 @@
-﻿namespace Models
+﻿using Services;
+
+namespace Models
 {
-    class AccountManager : Employee
+    // Heritage Class SON : FATHER
+    class AccountManager : ValidationService
     {
+        // Base 'SON' Constructor from 'FATHER' Employee
         public AccountManager( string cpf ) : base( 4000, cpf )
         {
         }

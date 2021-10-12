@@ -7,9 +7,28 @@ namespace AluraClass03
     {
         static void Main( string[] args )
         {
-            BonusMethod();
-            Console.ReadKey();          
+            //BonusMethod();
+            Loging();
+            Console.ReadKey();
         }
+
+        #region LogingChecker
+        public static void Loging()
+        {
+            var internSystem = new InternSytemService();
+            var roberta = new Director( "741.524.748-45" );
+            roberta.Name = "Roberta";
+            roberta.Password = "123";
+
+            var camila = new AccountManager( "521.012.589-12" );
+            camila.Name = "Camila";
+            camila.Password = "abc";
+
+            Console.WriteLine( internSystem.LogingChecker( roberta, "123" ) );
+            Console.WriteLine( internSystem.LogingChecker( roberta, "123" ) );
+            
+        }
+        #endregion
 
         #region BonusMethod
         public static void BonusMethod()
@@ -28,10 +47,10 @@ namespace AluraClass03
             var camila = new AccountManager( "521.012.589-12" );
             camila.Name = "Camila";
 
-            var guilherme = new CsharpDeveloper("147.548.357-89");
+            var guilherme = new CsharpDeveloper( "147.548.357-89" );
             guilherme.Name = "Guilherme";
 
-            
+
             b.Register( pedro );
             b.Register( roberta );
             b.Register( igor );

@@ -1,7 +1,9 @@
-﻿namespace Models
+﻿using Services;
+
+namespace Models
 {
     // Heritage Class SON : FATHER
-    public class Director : Employee
+    public class Director : ValidationService
     {
         // Base 'FATHER' Constructor from 'FATHER' Employee
         public Director( string cpf ) : base(5000, cpf )
