@@ -4,15 +4,15 @@ using System.Text;
 
 namespace Models
 {
-    public class Director
+    public class Director : Employee
     {
-        public string Name { get; set; }
-        public string Cpf { get; set; }
-        public double Salario { get; set; }
-
-        public double GetEmployeeBonus()
+        // Base Constructor from Employee
+        public Director( string cpf ) : base( cpf )
         {
-            return Salario * 0.10;
         }
+
+        // Override allow the overwritten
+        public override void AddSalary() => Salary *= 1.15;
+        public override double EmployeeBonus => Salary;
     }
 }

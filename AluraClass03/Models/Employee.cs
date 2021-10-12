@@ -2,13 +2,22 @@
 {
     public class Employee
     {
+        public static int EmployeeAccount { get; private set; }
         public string Name { get; set; }
         public string Cpf { get; set; }
-        public double Salario { get; set; }
+        public double Salary { get; set; }
 
-        public double GetEmployeeBonus()
+        public Employee( string cpf )
         {
-            return Salario * 0.10;
+            Cpf = cpf;
+            EmployeeAccount++;
         }
+
+        // Virtual allows method to be overwritten
+        //Ways to write multiply a variable
+        //Salary = Salary + ( Salary * 0.1 );
+        //Salary = Salary * 1.1;
+        public virtual void AddSalary() => Salary *= 1.1;
+        public virtual double EmployeeBonus => Salary * 0.10;
     }
 }

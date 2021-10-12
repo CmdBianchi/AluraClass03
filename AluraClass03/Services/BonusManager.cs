@@ -10,12 +10,7 @@ namespace Services
         private double _totalBonus;
         public void Register( Employee employee )
         {
-            _totalBonus += employee.GetEmployeeBonus();
-        }
-
-        public void Register( Director director )
-        {
-            _totalBonus += director.GetEmployeeBonus();
+            _totalBonus += employee.EmployeeBonus;
         }
 
         public double GetTotalBonus()
