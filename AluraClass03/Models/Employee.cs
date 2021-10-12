@@ -1,23 +1,29 @@
 ﻿namespace Models
 {
-    public class Employee
+    public abstract class Employee
     {
+        //Class Properties
         public static int EmployeeAccount { get; private set; }
         public string Name { get; set; }
-        public string Cpf { get; set; }
-        public double Salary { get; set; }
+        public string Cpf { get; protected set; }
+        public double Salary { get; protected set; }
 
-        public Employee( string cpf )
+        //Class Constructors
+        public Employee(double salary, string cpf )
         {
+            Salary = salary;
             Cpf = cpf;
             EmployeeAccount++;
         }
 
-        // Virtual allows method to be overwritten
-        //Ways to write multiply a variable
-        //Salary = Salary + ( Salary * 0.1 );
-        //Salary = Salary * 1.1;
-        public virtual void AddSalary() => Salary *= 1.1;
-        public virtual double EmployeeBonus => Salary * 0.10;
+        #region Click here to see ways to multilplie a variable
+        //AddSalary() => Salary *= 1.1;
+        // Salary = Salary + ( Salary * 0.1 );
+        // Salary = Salary * 1.1;
+        #endregion
+       
+        // Abstract allows the method to be call with declaration 
+        public abstract void AddSalary();
+        public abstract double EmployeeBonus();
     }
 }

@@ -1,16 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using Models;
+﻿using Models;
 
 namespace Services
 {
-    public class BonusManager
+    public class BonusService
     {
         private double _totalBonus;
         public void Register( Employee employee )
         {
-            _totalBonus += employee.EmployeeBonus;
+            _totalBonus += employee.EmployeeBonus();
         }
 
         public double GetTotalBonus()
