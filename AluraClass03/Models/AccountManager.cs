@@ -3,7 +3,7 @@
 namespace Models
 {
     // Heritage Class SON : FATHER
-    class AccountManager : ValidationService
+    class AccountManager : ValidationEmployee
     {
         // Base 'SON' Constructor from 'FATHER' Employee
         public AccountManager( string cpf ) : base( 4000, cpf )

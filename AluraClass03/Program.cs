@@ -24,9 +24,12 @@ namespace AluraClass03
             camila.Name = "Camila";
             camila.Password = "abc";
 
+            var outSource = new OutsourcedEmployee();
+            outSource.Password = "123456789";
+
+            Console.WriteLine( internSystem.LogingChecker( outSource, "123456789" ) );
             Console.WriteLine( internSystem.LogingChecker( roberta, "123" ) );
-            Console.WriteLine( internSystem.LogingChecker( roberta, "123" ) );
-            
+            Console.WriteLine( internSystem.LogingChecker( roberta, "123" ) );          
         }
         #endregion
 

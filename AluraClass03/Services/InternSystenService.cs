@@ -4,7 +4,7 @@ namespace Services
 {
     public class InternSytemService 
     {
-        public string LogingChecker( ValidationService employee, string passWord )
+        public string LogingChecker( IValidationService employee, string passWord )
         {
             bool authenticationUser = employee.Authentication( passWord );
 

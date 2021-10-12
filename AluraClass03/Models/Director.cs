@@ -3,9 +3,9 @@
 namespace Models
 {
     // Heritage Class SON : FATHER
-    public class Director : ValidationService
+    public class Director : ValidationEmployee
     {
-        // Base 'FATHER' Constructor from 'FATHER' Employee
+        // Base 'SON' Constructor from 'FATHER' Employee
         public Director( string cpf ) : base(5000, cpf )
         {
         }
